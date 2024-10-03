@@ -3,15 +3,15 @@ import io
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-a = int(input("Введіть перше число: "))
-b = int(input("Введіть друге число: "))
-c = int(input("Введіть третє числоgh: "))
+age = int(input("Введіть кількість прожитих років: "))
 
-unique_numbers = len(set([a, b, c]))
-
-if unique_numbers == 1:
-    print(3)
-elif unique_numbers == 2:
-    print(2)
+if age < 6:
+    print("Ще не школяр")
+elif 6 <= age <= 9:
+    print("Початкова школа")
+elif 10 <= age <= 15:
+    print("Середня школа")
+elif 16 <= age <= 17:
+    print("Старша школа")
 else:
-    print(0)
+    print("Вже не школяр")
