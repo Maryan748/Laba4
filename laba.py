@@ -1,3 +1,8 @@
+import sys
+import io
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 initial_investment = 25000
 interest_rate_uah = 11.5 / 100
 interest_rate_usd = 4 / 100
