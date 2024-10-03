@@ -3,16 +3,13 @@ import io
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-a = float(input("Введіть довжину сторони a: "))
-b = float(input("Введіть довжину сторони b: "))
-c = float(input("Введіть довжину сторони c: "))
+A = int(input("Введіть число A: "))
+B = int(input("Введіть число B: "))
 
-if a + b > c and a + c > b and b + c > a:
-    if a == b == c:
-        print("Рівносторонній трикутник")
-    elif a == b or b == c or a == c:
-        print("Рівнобедрений трикутник")
-    else:
-        print("Різносторонній трикутник")
+are_odd = (A % 2 != 0) and (B % 2 != 0)
+is_negative_difference = (A - B) < 0
+
+if are_odd and is_negative_difference:
+    print("Висловлювання істинне: Кожне з чисел A і B непарне, їх різниця — від'ємне число.")
 else:
-    print("Трикутник не існує")
+    print("Висловлювання хибне.")
